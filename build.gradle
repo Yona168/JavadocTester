@@ -14,7 +14,10 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
-task myJavadocs(type: Jar, dependsOn: javadoc) {
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
     destinationDir=project.projectDir
+    from javadoc.destinationDir
 }
 
