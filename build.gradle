@@ -17,7 +17,7 @@ dependencies {
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
     classifier = 'javadoc'
-    destinationDir=project.projectDir
+    destinationDir=file("javadocs")
     from javadoc.destinationDir
 }
 
